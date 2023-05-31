@@ -9,6 +9,8 @@
     width:75%;
     background:linear-gradient(to bottom, rgba(0,0,0,0),#02021e), url("./assets/background__Millionaire_.jpg");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 .pyramid{
     width:25%;
@@ -38,4 +40,37 @@
 .moneyListItemNumber{
     font-size: 20px;
     font-weight: 300;
+}
+
+.top{
+  height: 50%;
+  position: relative;
+}
+
+.timer{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+}
+
+.bottom{
+  height: 50%;
+}
+
+
+.Q1{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
