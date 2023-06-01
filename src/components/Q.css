@@ -58,17 +58,36 @@
    
 }
 
+/* answer correct */
+
 .answer.correct{
     animation: correct 3s ease forwards;
 }
 @keyframes correct{
-    0%,22%,42%{
+    0%,12%,22%,32%{
         background: blue;
     }
-    20%,40%,50%{
+    10%,20%,30%{
          background: linear-gradient(black,rgb(194, 56, 56));
     }
-    52%,100%{
+    50%,100%{
      background: teal;
+    }
+}
+
+/* answer wrong */
+
+.answer.wrong{
+    animation: wrong 3s ease forwards;
+}
+@keyframes wrong{
+    0%,12%,22%,32%{
+        background: blue;
+    }
+    10%,20%,30%{
+         background: linear-gradient(black,rgb(194, 56, 56));
+    }
+    50%,100%{
+     background: rgb(185, 10, 10);
     }
 }

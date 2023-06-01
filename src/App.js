@@ -5,8 +5,59 @@ import { useState } from 'react';
 import Q from './components/Q';
 
 
+
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1)
+  const [timeOut, setTimeOut]=useState(false);
+
+  const data =[
+   {
+    id:1,
+    question :"aaaaaaaaaaaaaaaaaaaa",
+    answers: [
+      {
+        text:"a",
+        correct: false,
+      },
+      {
+        text:"b",
+        correct:true,
+      },
+      {
+        text:"c",
+        correct:false,
+      },
+      {
+        text:"d",
+        correct:false,
+      },
+    ],
+   },
+
+   {
+    id:2,
+    question :"bbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaa",
+    answers:[
+      {
+        text:"a",
+        correct:true,
+      },
+      {
+        text:"b",
+        correct:false,
+      },
+      {
+        text:"c",
+        correct:false,
+      },
+      {
+        text:"d",
+        correct:false,
+      }
+    ]
+   }
+    
+  ]
   const moneyPyramid =[
     {id:1,amount:" Rs. 1000"},
     {id:2,amount:" Rs. 2000"},
@@ -34,7 +85,12 @@ function App() {
 
 
         <div className="bottom">
-         <Q/>
+         <Q 
+         data={data} 
+         setTimeOut={setTimeOut} 
+         setQuestionNumber={setQuestionNumber}
+         setQuestionNumber={setQuestionNumber}
+         />
         </div>
 
       </div>
