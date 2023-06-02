@@ -88,7 +88,7 @@ function App() {
          <Q 
          data={data} 
          setTimeOut={setTimeOut} 
-         setQuestionNumber={setQuestionNumber}
+          questionNumber={questionNumber}
          setQuestionNumber={setQuestionNumber}
          />
         </div>
