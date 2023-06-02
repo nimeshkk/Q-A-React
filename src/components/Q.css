@@ -68,7 +68,7 @@
         background: blue;
     }
     10%,20%,30%{
-         background: linear-gradient(black,rgb(194, 56, 56));
+         background: linear-gradient(black,rgb(47, 15, 164));
     }
     50%,100%{
      background: teal;
@@ -85,7 +85,7 @@
         background: blue;
     }
     10%,20%,30%{
-         background: linear-gradient(black,rgb(194, 56, 56));
+         background: linear-gradient(black,rgb(35, 10, 135));
     }
     50%,100%{
      background: rgb(185, 10, 10);

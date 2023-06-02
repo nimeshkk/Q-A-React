@@ -8,7 +8,8 @@ import Q from './components/Q';
 
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1)
-  const [timeOut, setTimeOut]=useState(false);
+  const [stop, setStop]=useState(false);
+  const[earned, setEarned]=useState("$ 0");
 
   const data =[
    {
@@ -79,6 +80,9 @@ function App() {
   return (
     <div className="app">
       <div className="main">
+        {stop ? <h1>You Earned: {earned}</h1> :(
+
+          <>
         <div className="top">
           <div className="timer">30</div>
         </div>
@@ -87,11 +91,14 @@ function App() {
         <div className="bottom">
          <Q 
          data={data} 
-         setTimeOut={setTimeOut} 
+         setStop={setStop} 
           questionNumber={questionNumber}
          setQuestionNumber={setQuestionNumber}
          />
         </div>
+        
+        </>
+        )}
 
       </div>
       <div className="pyramid">
