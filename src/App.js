@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import  "./app1.css";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Q from './components/Q';
+import Timer from './components/Timer';
 
 
 
@@ -10,6 +11,7 @@ function App() {
   const [questionNumber, setQuestionNumber] = useState(1)
   const [stop, setStop]=useState(false);
   const[earned, setEarned]=useState("$ 0");
+  
 
   const data =[
    {
@@ -59,7 +61,8 @@ function App() {
    }
     
   ]
-  const moneyPyramid =[
+
+  const moneyPyramid = [
     {id:1,amount:" Rs. 1000"},
     {id:2,amount:" Rs. 2000"},
     {id:3,amount:" Rs. 5000"},
@@ -76,15 +79,27 @@ function App() {
     {id:14,amount:" Rs. 1000000"},
     {id:15,amount:" Rs. 2000000"},
     
-  ].reverse();
+   ].reverse();
+
+   
+
+  useEffect(()=>{
+    questionNumber > 1 && 
+    setEarned(moneyPyramid.find((m)=> m.id === questionNumber - 1).amount);
+  },[moneyPyramid,questionNumber]);
+
   return (
     <div className="app">
       <div className="main">
-        {stop ? <h1>You Earned: {earned}</h1> :(
+        {stop ? (
+        <h1 className="endText">You Earned: {earned}</h1>
+         ):(
 
           <>
         <div className="top">
-          <div className="timer">30</div>
+          <div className="timer">
+            <Timer/>
+            </div>
         </div>
 
 
