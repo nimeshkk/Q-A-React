@@ -7,6 +7,8 @@ import Timer from './components/Timer';
 
 
 
+
+
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1)
   const [stop, setStop]=useState(false);
@@ -98,7 +100,7 @@ function App() {
           <>
         <div className="top">
           <div className="timer">
-            <Timer/>
+            <Timer setStop={setStop}/>
             </div>
         </div>
 

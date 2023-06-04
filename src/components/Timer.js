@@ -1,20 +1,27 @@
-import { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
-export default function Timer() {
-    const {timer, setTimer} = useState(30);
+export default function Countdown() {
+  const [num, setNum] = useState(5);
+  
+ 
+  
+  let intervalRef = useRef();
+  
+  const decreaseNum = () => setNum((prev) => prev - 1);
 
-    useEffect(()=>{
-        const interval = setInterval(()=>{
-            setTimer((prev)=>prev - 1);
-        },1000);
-        return ()=> clearInterval(interval);
-    })
-  return timer;
-  <>
-  (
+  useEffect(() => {
+    
+    intervalRef.current = setInterval(decreaseNum, 1000);
+
+    return () => clearInterval(intervalRef.current);
+  }, []);
+  
+  return (
     <div>
+      <div>{num}</div>
       
     </div>
-  )
-  </>
+  );
 }
+
+
