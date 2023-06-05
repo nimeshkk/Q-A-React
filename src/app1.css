@@ -47,7 +47,7 @@
   position: relative;
 }
 
-.timer{
+/* .timer{
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -60,7 +60,7 @@
     position: absolute;
     bottom: 10px;
     left: 70px;
-}
+} */
 
 .bottom{
   height: 50%;

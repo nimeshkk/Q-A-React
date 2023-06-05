@@ -18,22 +18,22 @@ function App() {
   const data =[
    {
     id:1,
-    question :"aaaaaaaaaaaaaaaaaaaa",
+    question :"Which of the following programming languages is not statically typed?",
     answers: [
       {
-        text:"a",
+        text:"C",
         correct: false,
       },
       {
-        text:"b",
-        correct:true,
-      },
-      {
-        text:"c",
+        text:"Java",
         correct:false,
       },
       {
-        text:"d",
+        text:"Python",
+        correct:true,
+      },
+      {
+        text:"C++",
         correct:false,
       },
     ],
@@ -41,26 +41,98 @@ function App() {
 
    {
     id:2,
-    question :"bbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaa",
+    question :"Which of the following sorting algorithms has the worst-case time complexity of O(n^2)?",
     answers:[
       {
-        text:"a",
+        text:" Bubble sort",
         correct:true,
       },
       {
-        text:"b",
+        text:"Quick sort",
         correct:false,
       },
       {
-        text:"c",
+        text:"Merge sort",
         correct:false,
       },
       {
-        text:"d",
+        text:"Insertion sort",
         correct:false,
       }
     ]
-   }
+   },
+
+
+   {
+    id:3,
+    question :"In computer networking, which protocol is commonly used for sending and receiving emails?",
+    answers:[
+      {
+        text:"SMTP",
+        correct:true,
+      },
+      {
+        text:"FTP",
+        correct:false,
+      },
+      {
+        text:"HTTP",
+        correct:false,
+      },
+      {
+        text:"UDP",
+        correct:false,
+      }
+    ]
+   },
+
+
+   {
+    id:4,
+    question :"Which of the following is an example of a high-level programming language?",
+    answers:[
+      {
+        text:"Assembly language",
+        correct:false,
+      },
+      {
+        text:"Machine language",
+        correct:false,
+      },
+      {
+        text:" C",
+        correct:true,
+      },
+      {
+        text:"Binary code",
+        correct:false,
+      }
+    ]
+   },
+
+
+   {
+    id:5,
+    question :"Which of the following is NOT an example of a network topology?",
+    answers:[
+      {
+        text:"Star",
+        correct:false,
+      },
+      {
+        text:"Bus",
+        correct:false,
+      },
+      {
+        text:"Tree",
+        correct:false,
+      },
+      {
+        text:"Loop",
+        correct:true,
+      }
+    ]
+   },
     
   ]
 
@@ -100,7 +172,7 @@ function App() {
           <>
         <div className="top">
           <div className="timer">
-            <Timer setStop={setStop}/>
+            {/* <Timer /> */}
             </div>
         </div>
 

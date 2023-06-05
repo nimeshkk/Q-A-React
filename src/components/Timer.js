@@ -1,39 +1,38 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-export default function Countdown() {
-  const [num, setNum] = useState(5);
-  const [earned, setEarned] = useState(false);
-
-  let intervalRef = useRef();
-
-  const decreaseNum = () => {
-    setNum((prev) => prev - 1);
-  };
+const Timer = () => {
+  const [seconds, setSeconds] = useState(10);
 
   useEffect(() => {
-    intervalRef.current = setInterval(decreaseNum, 1000);
+    const timer = setInterval(() => {
+      setSeconds((prevSeconds) => prevSeconds - 1);
+    }, 1000);
 
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
-  useEffect(() => {
-    if (num === 0) {
-      setEarned(true);
-    }
-  }, [num]);
+  const formatTime = (time) =>
+   {
+    
+    const seconds = time;
+    return `${seconds.toString().padStart(2, '0')}`;
+  };
 
-  return (
-    <div>
-      {earned ? (
-        <div>Earned!</div>
-      ) : (
-        <div>
-          <div>{num}</div>
-        </div>
-      )}
-    </div>
-  );
-}
+  return <div className="timer">{formatTime(seconds)}</div>;
+};
+
+export default Timer;
+
+
+
+
+
+
+
+
+
 
 
 
