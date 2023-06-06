@@ -184,22 +184,22 @@ function App() {
 
    {
     id:8,
-    question :"",
+    question :"Which of the following is NOT a fundamental principle of object-oriented programming (OOP)?",
     answers:[
       {
-        text:"",
+        text:"Linearity",
         correct:true,
       },
       {
-        text:"",
+        text:"Abstraction",
         correct:false,
       },
       {
-        text:"",
+        text:" Encapsulation",
         correct:false,
       },
       {
-        text:"",
+        text:"Inheritance",
         correct:false,
       }
     ]
@@ -207,22 +207,22 @@ function App() {
 
    {
     id:9,
-    question :"",
+    question :"Which of the following is an example of a non-volatile memory?",
     answers:[
       {
-        text:"",
+        text:"RAM",
+        correct:false,
+      },
+      {
+        text:"Cache",
+        correct:false,
+      },
+      {
+        text:" SSD",
         correct:true,
       },
       {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
+        text:"Register",
         correct:false,
       }
     ]
@@ -230,22 +230,22 @@ function App() {
 
    {
     id:10,
-    question :"",
+    question :"What is the role of a router in a computer network?",
     answers:[
       {
-        text:"",
+        text:"Transmits data within a local network",
+        correct:false,
+      },
+      {
+        text:"Connects multiple networks together",
         correct:true,
       },
       {
-        text:"",
+        text:"Stores and retrieves data from remote servers",
         correct:false,
       },
       {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
+        text:"Filters incoming and outgoing network traffic",
         correct:false,
       }
     ]
@@ -253,22 +253,22 @@ function App() {
 
    {
     id:11,
-    question :"",
+    question :"Which of the following is a popular version control system used in software development?",
     answers:[
       {
-        text:"",
+        text:"Subversion (SVN)",
         correct:true,
       },
       {
-        text:"",
+        text:"Docker",
         correct:false,
       },
       {
-        text:"",
+        text:"Jenkins",
         correct:false,
       },
       {
-        text:"",
+        text:"Apache Hadoop",
         correct:false,
       }
     ]
@@ -276,22 +276,22 @@ function App() {
 
    {
     id:12,
-    question :"",
+    question :"Which of the following is an example of a symmetric encryption algorithm?",
     answers:[
       {
-        text:"",
+        text:"RSA",
+        correct:false,
+      },
+      {
+        text:"AES",
         correct:true,
       },
       {
-        text:"",
+        text:"Diffie-Hellman",
         correct:false,
       },
       {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
+        text:"SHA-256",
         correct:false,
       }
     ]
@@ -299,45 +299,45 @@ function App() {
 
    {
     id:13,
-    question :"",
+    question :"What is the purpose of a DNS (Domain Name System)?",
     answers:[
       {
-        text:"",
+        text:"To encrypt internet traffic",
+        correct:false,
+      },
+      {
+        text:"To secure email communication",
+        correct:false,
+      },
+      {
+        text:"To manage database systems",
+        correct:false,
+      },
+      {
+        text:"To translate domain names into IP addresses",
         correct:true,
-      },
-      {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
-        correct:false,
       }
     ]
    },
 
    {
     id:14,
-    question :"",
+    question :"Which of the following is an example of a cloud computing service model?",
     answers:[
       {
-        text:"",
+        text:"Platform as a Service (PaaS)",
         correct:true,
       },
       {
-        text:"",
+        text:"Virtual Private Network (VPN)",
         correct:false,
       },
       {
-        text:"",
+        text:"Network Attached Storage (NAS)",
         correct:false,
       },
       {
-        text:"",
+        text:"Wireless Fidelity (Wi-Fi)",
         correct:false,
       }
     ]
@@ -345,26 +345,27 @@ function App() {
 
    {
     id:15,
-    question :"",
+    question :"Which of the following is a widely used relational database management system (RDBMS)?",
     answers:[
       {
-        text:"",
+        text:" MongoDB",
+        correct:false,
+      },
+      {
+        text:"Redis",
+        correct:false,
+      },
+      {
+        text:"Apache Hadoop",
+        correct:false,
+      },
+      {
+        text:" SQLite",
         correct:true,
-      },
-      {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
-        correct:false,
-      },
-      {
-        text:"",
-        correct:false,
       }
     ]
    },
+ 
   ]
 
   const moneyPyramid = [
@@ -392,6 +393,17 @@ function App() {
     questionNumber > 1 && 
     setEarned(moneyPyramid.find((m)=> m.id === questionNumber - 1).amount);
   },[moneyPyramid,questionNumber]);
+
+
+
+  useEffect(() => {
+    if (questionNumber > 15) {
+      setStop(true);
+      {stop && questionNumber > 15 && (
+        <h1 className="endText"> Congratulation You Win {earned}</h1>
+      )}
+    }
+  }, [questionNumber]);
 
   return (
     <div className="app">
@@ -455,5 +467,10 @@ function App() {
     </div>
   );
 }
+
+
+
+
+
 
 export default App;
