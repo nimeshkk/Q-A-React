@@ -133,7 +133,238 @@ function App() {
       }
     ]
    },
+
+   {
+    id:6,
+    question :"What does the acronym SQL stand for?",
+    answers:[
+      {
+        text:" Structured Query Language",
+        correct:true,
+      },
+      {
+        text:"Standard Query Language",
+        correct:false,
+      },
+      {
+        text:"Sequential Query Language",
+        correct:false,
+      },
+      {
+        text:"Simple Query Language",
+        correct:false,
+      }
+    ]
+   },
+
+
+   {
+    id:7,
+    question :"What is the function of a compiler in the software development process?",
+    answers:[
+      {
+        text:"Provides a user interface for code editing",
+        correct:false,
+      },
+      {
+        text:"Executes the code line by line",
+        correct:false,
+      },
+      {
+        text:"Optimizes the code for better performance",
+        correct:false,
+      },
+      {
+        text:" Converts high-level code into machine code",
+        correct:true,
+      }
+    ]
+   },
     
+
+   {
+    id:8,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:9,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:10,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:11,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:12,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:13,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:14,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
+
+   {
+    id:15,
+    question :"",
+    answers:[
+      {
+        text:"",
+        correct:true,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      },
+      {
+        text:"",
+        correct:false,
+      }
+    ]
+   },
   ]
 
   const moneyPyramid = [
