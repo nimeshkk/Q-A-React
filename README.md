@@ -1,3 +1,14 @@
+<table>
+  <tr>
+    <td><img src="https://github.com/nimeshkk/Ecommerce_React/blob/master/img1/Screenshot%20(61).png" width="400" height="250"/></td>
+    <td><img src="https://github.com/nimeshkk/Ecommerce_React/blob/master/img1/Screenshot%20(62).png" width="400" height="250"/></td>
+  </tr>
+  <tr>
+     <td><img src="https://github.com/nimeshkk/Ecommerce_React/blob/master/img1/Screenshot%20(63).png" width="400" height="250"/></td>
+     <td><img src="https://github.com/nimeshkk/Ecommerce_React/blob/master/img1/Screenshot%20(64).png" width="400" height="250"/></td>
+    
+  </tr>
+</table>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
